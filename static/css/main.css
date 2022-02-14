@@ -11,13 +11,6 @@
     user-select: none;  
 }
 
-@font-face {
-    font-family: "ConcertOne"; 
-    src: url("/static/fonts/DISTGRG_.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-} 
-
 html,body{
     background:#0c0c0c;
 }
