@@ -1,0 +1,55 @@
+.logo {
+    height: 180px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 180px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.namee {
+    width: 650px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.nameo {
+    width: 300px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+  
+.icons_sotial {
+    transition: 0.2s; 
+    margin: 10px;
+    color: rgb(185, 185, 185);
+}   
+  
+.icons_sotial:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .hover_icon {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 15px;
+        width: auto;
+        z-index: -999;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .hover_icon {
+        width: auto;
+        display: flex; 
+        margin-top: -55px;
+        align-items: center;
+        justify-content: center;
+        z-index: -999;
+    }
+}
