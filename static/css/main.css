@@ -19,6 +19,8 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+p { text-align: center }
+
 .description {
     color: white;
     font-size: 22px;
