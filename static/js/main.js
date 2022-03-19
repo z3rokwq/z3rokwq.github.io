@@ -53,3 +53,9 @@ $('.time-slow').on('click', function(e) {
        location.href = href;
     }, timeout);
 });   
+
+$('#type').typed({
+    strings: ["^300Lua Coder", "^300 14y.o", "^300Ru/En", "^300Live in Rostov-on-Don"],
+    typeSpeed: 40,
+    loop: true,
+})
