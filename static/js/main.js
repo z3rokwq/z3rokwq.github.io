@@ -73,6 +73,4 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
-$(function() {
-    $('.rev_slider').slick();
-})
+$('.rev_slider').slick();
