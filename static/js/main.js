@@ -73,4 +73,8 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
-$('.rev_slider').slick();
+$('.rev_slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
