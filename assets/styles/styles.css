@@ -1,0 +1,249 @@
+:root {
+   --md-sys-color-primary: #B4C5FF;
+   --md-sys-color-on-primary: #002C7A;
+   --md-sys-color-primary-container: #0041A8;
+   --md-sys-color-surface: #1B1B1F;
+   --md-sys-color-surface-container: #2D2D32;
+   --md-sys-color-on-surface: #E3E2E6;
+   --md-sys-color-outline: #8E9099;
+
+   --md-sys-typescale-body-large: 1rem;
+   --md-sys-shape-corner-extra-large: 28px;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+   min-height: 100vh;
+   padding: 3rem;
+
+   background: var(--md-sys-color-surface);
+
+   color: var(--md-sys-color-on-surface);
+
+   #container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      max-width: 1200px;
+      gap: 1.5rem;
+      margin: 0 auto;
+
+      .material-symbols-rounded {
+         color: var(--md-sys-color-primary);
+         font-variation-settings:
+                 'FILL' 0,
+                 'wght' 400,
+                 'GRAD' 0,
+                 'opsz' 22;
+      }
+
+      .card {
+         min-width: 200px;
+         padding: 1.5rem;
+
+         background: var(--md-sys-color-surface-container);
+         border-radius: var(--md-sys-shape-corner-extra-large);
+         transition: transform 0.2s ease;
+
+         .card-header {
+            display: flex;
+            align-items: center;
+
+            gap: 1rem;
+            margin-bottom: 1rem;
+         }
+
+         .card-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 0.75rem;
+
+            list-style: none;
+
+            > * {
+               padding: 0.75rem;
+
+               border-radius: 12px;
+               background: rgba(255, 255, 255, 0.05);
+
+               font-size: 0.95rem;
+            }
+         }
+
+         .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 0.75rem;
+
+            > * {
+               display: flex;
+               align-items: center;
+
+               gap: 1rem;
+               padding: 0.75rem;
+
+               border-radius: 12px;
+               background: rgba(255, 255, 255, 0.05);
+
+               color: inherit;
+               font-size: 0.95rem;
+               text-decoration: none;
+
+               transition: background 0.2s;
+            }
+
+            > *:hover {
+               background: rgba(255, 255, 255, 0.1);
+            }
+         }
+      }
+
+      #avatar {
+         grid-column: 1;
+         grid-row: 1 / span 2;
+
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+
+         border-radius: 2rem;
+      }
+
+      #profile-card {
+         grid-column: 2 / span 3;
+         grid-row: 1;
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+
+         text-align: left;
+
+         .title {
+            margin-bottom: 0.25rem;
+
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+         }
+
+         .subtitle {
+            margin-bottom: 1rem;
+
+            color: var(--md-sys-color-outline);
+            font-size: 1.25rem;
+         }
+
+         .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            gap: 0.5rem;
+
+            .badge-container__item {
+               padding: 0.5rem 1rem;
+
+               background-color: rgba(255, 255, 255, 0.05);
+               border-radius: 1rem;
+
+               font-size: 0.875rem;
+            }
+         }
+      }
+
+      #aboutme-card {
+         grid-column: 2 / span 3;
+         grid-row: 2;
+      }
+
+      #frontend-card {
+         grid-column: 1;
+         grid-row: 3;
+      }
+
+      #backend-card {
+         grid-column: 2;
+         grid-row: 3;
+      }
+
+      #softwaredev-card {
+         grid-column: 3;
+         grid-row: 3;
+      }
+
+      #advanced-card {
+         grid-column: 4;
+         grid-row: 3;
+      }
+
+      #contacts-card {
+         grid-column: 1 / span 3;
+         grid-row: 4;
+      }
+
+      #languages-card {
+         grid-column: 4;
+         grid-row: 4;
+      }
+   }
+}
+
+@media (max-width: 1023px) {
+   body {
+      padding: 1rem;
+
+      #container {
+         grid-template-columns: 1fr !important;
+
+         .card {
+            .card-grid {
+               grid-template-columns: 1fr !important;
+            }
+         }
+
+         #avatar {
+            grid-column: 1 !important;
+            grid-row: 1 !important;
+
+            max-height: 300px;
+
+            object-fit: cover;
+            object-position: 50% 25%;
+            aspect-ratio: 9 / 21;
+
+            background-color: white;
+         }
+
+         #profile-card {
+            .title {
+               font-size: 1.75rem;
+            }
+
+            .subtitle {
+               font-size: 1.1rem;
+            }
+         }
+
+         #profile-card,
+         #aboutme-card,
+         #frontend-card,
+         #backend-card,
+         #softwaredev-card,
+         #advanced-card,
+         #contacts-card,
+         #language-card {
+            grid-column: 1 !important;
+            grid-row: auto !important;
+         }
+      }
+   }
+}
